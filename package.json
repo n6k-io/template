@@ -5,16 +5,16 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@n6k.io/ui": "^0.9.4",
-    "@n6k.io/build": "^0.2.2",
-    "@n6k.io/db": "^0.7.2",
+    "@n6k.io/build": "^0.2.6",
+    "@n6k.io/db": "^0.7.3",
+    "@n6k.io/ui": "^0.9.6",
+    "@tailwindcss/typography": "^0.5.19",
     "@tanstack/react-query": "^5.101.0",
     "esbuild": "^0.27.3",
     "radix-ui": "^1.5.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "shadcn": "^4.0.2",
-    "@tailwindcss/typography": "^0.5.19",
     "tw-animate-css": "^1.4.0"
   },
   "devDependencies": {
