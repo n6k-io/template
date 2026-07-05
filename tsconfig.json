@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    // Dedupe React onto a single copy. `@n6k.io/*` are linked (symlinked to
+    // sibling repos) and ship .tsx source, so tsc typechecks their internals
+    // against whichever `@types/react` sits nearest them — a physically distinct
+    // copy from ours. That makes `React.Ref` etc. "two unrelated types". Pinning
+    // react/react-dom here forces every import (ours and the linked packages')
+    // to one identity. This is the type-layer analog of n6k.config.json `dedup`.
+    "paths": {
+      "@/*": ["./src/*"],
+      "react": ["./node_modules/@types/react"],
+      "react/*": ["./node_modules/@types/react/*"],
+      "react-dom": ["./node_modules/@types/react-dom"],
+      "react-dom/*": ["./node_modules/@types/react-dom/*"]
+    },
+    "jsx": "react-jsx",
+    "target": "es2022",
+    "lib": ["es2023", "dom", "dom.iterable"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true
+  },
+  "include": ["src"]
+}
