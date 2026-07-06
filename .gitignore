@@ -13,3 +13,7 @@ build/
 
 # OS
 .DS_Store
+__pycache__
+n6k.gen.ts
+uv.lock
+bun.lock

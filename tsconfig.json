@@ -12,11 +12,17 @@
       "react": ["./node_modules/@types/react"],
       "react/*": ["./node_modules/@types/react/*"],
       "react-dom": ["./node_modules/@types/react-dom"],
-      "react-dom/*": ["./node_modules/@types/react-dom/*"]
+      "react-dom/*": ["./node_modules/@types/react-dom/*"],
+      "@tanstack/react-query": ["./node_modules/@tanstack/react-query"],
+      "@tanstack/react-table": ["./node_modules/@tanstack/react-table"]
     },
     "jsx": "react-jsx",
+    // Editor-time .mdx type-checking (VS Code + the MDX extension), using the
+    // `mdx.checkMdx` key below. `tsc` CLI ignores plugins and doesn't parse
+    // .mdx, so `bun run typecheck` covers .ts/.tsx only — .mdx is editor-only.
+    "plugins": [{ "name": "@mdx-js/typescript-plugin" }],
     "target": "es2022",
-    "lib": ["es2023", "dom", "dom.iterable"],
+    "lib": ["es2024", "dom", "dom.iterable"],
     "module": "esnext",
     "moduleResolution": "bundler",
     "esModuleInterop": true,
@@ -24,5 +30,6 @@
     "strict": true,
     "noEmit": true
   },
+  "mdx": { "checkMdx": true },
   "include": ["src"]
 }
