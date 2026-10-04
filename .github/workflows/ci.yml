@@ -27,3 +27,23 @@ jobs:
 
       - name: mypy
         run: uv run mypy
+
+  node:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: prettier
+        run: bun run format:check
+
+      - name: eslint
+        run: bun run lint
+
+      - name: typecheck
+        run: bun run typecheck
