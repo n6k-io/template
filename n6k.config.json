@@ -1,0 +1,6 @@
+{
+  "srcDir": "src",
+  "appDir": "src/app",
+  "port": 7823,
+  "dedup": ["react", "react-dom", "@n6k.io/db", "@tanstack/react-query"]
+}

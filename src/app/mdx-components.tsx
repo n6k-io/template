@@ -1,3 +1,4 @@
+import type { ComponentProps } from "react";
 import type { MDXComponents } from "mdx/types";
 import * as n6k from "@n6k.io/ui/components";
 
@@ -9,8 +10,12 @@ import * as n6k from "@n6k.io/ui/components";
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     ...n6k,
-    h1: (props) => <h1 className="pb-4 text-4xl font-black tracking-tight" {...props} />,
-    h2: (props) => <h2 className="pb-3 text-2xl font-bold tracking-tight" {...props} />,
+    h1: (props: ComponentProps<"h1">) => (
+      <h1 className="pb-4 text-4xl font-black tracking-tight" {...props} />
+    ),
+    h2: (props: ComponentProps<"h2">) => (
+      <h2 className="pb-3 text-2xl font-bold tracking-tight" {...props} />
+    ),
     ...components,
-  };
+  } as unknown as MDXComponents;
 }

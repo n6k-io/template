@@ -1,5 +1,9 @@
 import type { ReactNode } from "react";
-import { duckdbWorkerUrl, fetchWorkerUrl, wsWorkerUrl } from "virtual:n6k-workers";
+import {
+  duckdbWorkerUrl,
+  fetchWorkerUrl,
+  wsWorkerUrl,
+} from "virtual:n6k-workers";
 import { duckdbBundle } from "virtual:n6k-duckdb-bundle";
 import { QueryProvider, DuckDBProvider } from "@n6k.io/db/react";
 import type { DatabaseSpec } from "@n6k.io/db/react";
