@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     // Dedupe React onto a single copy. `@n6k.io/*` are linked (symlinked to
     // sibling repos) and ship .tsx source, so tsc typechecks their internals
     // against whichever `@types/react` sits nearest them — a physically distinct
