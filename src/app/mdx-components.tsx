@@ -10,6 +10,7 @@ import * as n6k from "@n6k.io/ui/components";
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     ...n6k,
+    Controls: n6k.controls,
     h1: (props: ComponentProps<"h1">) => (
       <h1 className="pb-4 text-4xl font-black tracking-tight" {...props} />
     ),

@@ -13,11 +13,11 @@
     "@codemirror/language": "6.12.4"
   },
   "dependencies": {
-    "@duckdb/duckdb-wasm": "1.33.1-dev57.0",
-    "@n6k.io/build": "^0.3.8",
-    "@n6k.io/db": "^0.12.2",
+    "@duckdb/duckdb-wasm": "1.33.1-dev114.0",
+    "@n6k.io/build": "^0.4.0",
+    "@n6k.io/db": "^0.13.1",
     "@n6k.io/runtime": "^0.1.2",
-    "@n6k.io/ui": "^0.10.2",
+    "@n6k.io/ui": "^0.10.4",
     "@tailwindcss/typography": "^0.5.20",
     "@tanstack/react-query": "^5.104.1",
     "esbuild": "^0.28.2",
