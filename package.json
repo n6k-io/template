@@ -41,6 +41,8 @@
     "eslint-plugin-unicorn": "^77.0.0",
     "globals": "^17.13.0",
     "prettier": "^3.9.9",
+    "remark-directive": "^4.0.0",
+    "remark-frontmatter": "^5.0.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.71.1"
