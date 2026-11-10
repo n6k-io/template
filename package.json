@@ -14,10 +14,10 @@
   },
   "dependencies": {
     "@duckdb/duckdb-wasm": "1.33.1-dev114.0",
-    "@n6k.io/build": "^0.4.0",
+    "@n6k.io/build": "^0.5.1",
     "@n6k.io/db": "^0.13.1",
     "@n6k.io/runtime": "^0.1.2",
-    "@n6k.io/ui": "^0.10.4",
+    "@n6k.io/ui": "^0.10.5",
     "@tailwindcss/typography": "^0.5.20",
     "@tanstack/react-query": "^5.104.1",
     "esbuild": "^0.28.2",

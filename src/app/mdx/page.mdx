@@ -1,27 +1,25 @@
-export const f = (c) => ({ category: c === "All" ? undefined : c });
-
 # Sales
 
 Revenue and order volume by month. Pick a category to drill in.
 
-::Select[category]{label="Category" options="All,Hardware,Software,Services" default="All"}
+::Select[category]{label="Category" options="Hardware,Software,Services" empty="All"}
 
 <Metric
   label="Revenue"
   data="db.revenue_by_month"
   value="sum(revenue)"
   valueFormat="$,.0f"
-  filters={f(category)}
+  filters={{ category }}
 />
 <Metric
   label="Orders"
   data="db.revenue_by_month"
   value="sum(orders)"
-  filters={f(category)}
+  filters={{ category }}
 />
 <LineChart
   data="db.revenue_by_month"
   x="month"
   y="sum(revenue)"
-  filters={f(category)}
+  filters={{ category }}
 />
