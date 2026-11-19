@@ -5,10 +5,14 @@ db = Database()
 
 
 @db.data()
-def alpha() -> pd.DataFrame:
-    return pd.DataFrame({"a": [1, 2, 3], "b": [4, 5, 6]})
+def orders() -> pd.DataFrame:
+    return pd.read_parquet("orders.parquet")
 
 
-@db.data()
-def beta() -> pd.DataFrame:
-    return pd.DataFrame({"a": [1.1, 2.2, 3.3], "b": [4.4, 5.5, 6.6]})
+@orders.derive()
+def revenue_by_month(df: pd.DataFrame) -> pd.DataFrame:
+    return (
+        df.assign(month=df.order_date.dt.strftime("%Y-%m"))
+        .groupby(["month", "category"], as_index=False)
+        .agg(revenue=("amount", "sum"), orders=("amount", "count"))
+    )
